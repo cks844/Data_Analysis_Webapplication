@@ -1,0 +1,7 @@
+django
+pandas
+matplotlib.pyplot
+seaborn
+os
+io
+urllib
