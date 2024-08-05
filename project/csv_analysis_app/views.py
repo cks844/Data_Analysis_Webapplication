@@ -115,7 +115,7 @@ def fill_missing_values(request):
 
     numerical_columns = df.select_dtypes(include=['float', 'int']).drop(columns=['ID'], errors='ignore')
     if not numerical_columns.empty:
-        df[numerical_columns.columns] = numerical_columns.fillna(numerical_columns.mean(), inplace=True) # filling missing values with mean value
+        df[numerical_columns.columns] = numerical_columns.fillna(numerical_columns.mean()) # filling missing values with mean value
 
     filled_summary = df.describe().to_html()
 
