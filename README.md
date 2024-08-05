@@ -11,7 +11,7 @@ The Data Analysis Application is a web-based tool for uploading, analyzing, and 
 - **Handle Missing Values**: Options to remove or fill missing values in the dataset.  
 - **Visualization**: Generates histograms and combined histograms of numerical columns in the data.
 
-**This is the landing page where you can upload your CSV file**
+   **This is the landing page where you can upload your CSV file**
 ![Application Screenshot](project/images/landing_page.png)
 
 **This is the results page for analysis**
