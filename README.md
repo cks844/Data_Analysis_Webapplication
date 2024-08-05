@@ -4,7 +4,7 @@
 The Data Analysis Application is a web-based tool for uploading, analyzing, and visualizing CSV data files. Developed with Django, it provides functionalities to handle missing values, generate plots, and display various statistics about the data.
 
 ## Features
-- **Upload CSV Files**: Allows users to upload CSV files for analysis. Only CSV files are supported. Otherwise a warning is shown
+- **Upload CSV Files**: Allows users to upload CSV files for analysis. Only CSV files are supported. Otherwise a warning is shown.
 - **Data Analysis**: Displays the head and summary statistics of the uploaded data.
 - **Handle Missing Values**: Options to remove or fill missing values in the dataset.  
 - **Visualization**: Generates histograms and combined histograms of numerical columns in the data.
@@ -25,9 +25,10 @@ To set up and run the project locally, follow these steps:
    https://github.com/cks844/Data_Analysis_Webapplication.git
 3. **Navigate to the project folder by using the command in IDE terminal**:
    cd project
-4. **Make a new folder inside project folder**:
+4. **Make a new folder inside project folder using command **:
    mkdir media
-   (The path should be ../project/media)
+   **(The path of this folder should be as follows ../project/media)**
+   No need to change the directory to media, continue in the project folder itself.
 5. **Install the required libraries by using the command in IDE terminal**:
    pip install -r requirements.txt
 6. **For Migration**:
