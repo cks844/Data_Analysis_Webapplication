@@ -6,7 +6,7 @@ The Data Analysis Application is a web-based tool for uploading, analyzing, and 
 
 ## Features
 
-- **Upload CSV Files**: Allows users to upload CSV files for analysis.
+- **Upload CSV Files**: Allows users to upload CSV files for analysis. Only CSV files are supported. Otherwise a warning is shown
 - **Data Analysis**: Displays the head and summary statistics of the uploaded data.
 - **Handle Missing Values**: Options to remove or fill missing values in the dataset.  
 - **Visualization**: Generates histograms and combined histograms of numerical columns in the data.
