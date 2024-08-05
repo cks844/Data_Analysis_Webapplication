@@ -21,7 +21,7 @@ The Data Analysis Application is a web-based tool for uploading, analyzing, and 
 ## Installation
 To set up and run the project locally, follow these steps:
 1. **Ensure you have installed Python and VSCode(optional)**:
-2.  **Clone the Repository using the web url**:
+2.  **Clone the Repository in IDE using the web url**:
    https://github.com/cks844/Data_Analysis_Webapplication.git
 3. **Navigate to the project folder by using the command in IDE terminal**:
    cd project
