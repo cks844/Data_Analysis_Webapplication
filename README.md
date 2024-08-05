@@ -25,13 +25,16 @@ To set up and run the project locally, follow these steps:
    https://github.com/cks844/Data_Analysis_Webapplication.git
 3. **Navigate to the project folder by using the command in IDE terminal**:
    cd project
-4. **Install the required libraries by using the command in IDE terminal**:
+4. **Make a new folder inside project folder**:
+   mkdir media
+   (The path should be ../project/media)
+5. **Install the required libraries by using the command in IDE terminal**:
    pip install -r requirements.txt
-5. **For Migration**:
+6. **For Migration**:
    python manage.py migrate
-6. **For running the application**:
+7. **For running the application**:
    python manage.py runserver
-7. **To access the application**:
+8. **To access the application**:
    http://127.0.0.1:8000/
 
 ## Usage
