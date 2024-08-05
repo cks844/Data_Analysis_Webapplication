@@ -38,10 +38,10 @@ To set up and run the project locally, follow these steps:
 7. **To access the application**:
    http://127.0.0.1:8000/
 
-**Usage**:
-1.Upload a CSV File: Navigate to the landing page and upload a CSV file using the provided form.
-2.View Data: After uploading, you can view the data head and summary statistics.
-3.Handle Missing Values: Use the provided buttons to remove or fill missing values in the dataset.
-4.Visualize Data: The application will generate and display histograms for the numerical columns in your data.
+## Usage
+1.**Upload a CSV File**: Navigate to the landing page and upload a CSV file using the provided form.
+2.**View Data**: After uploading, you can view the data head and summary statistics.
+3.**Handle Missing Values**: Use the provided buttons to remove or fill missing values in the dataset.
+4.**Visualize Data**: The application will generate and display histograms for the numerical columns in your data.
 
    
