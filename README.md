@@ -12,13 +12,13 @@ The Data Analysis Application is a web-based tool for uploading, analyzing, and 
 - **Visualization**: Generates histograms and combined histograms of numerical columns in the data.
 
 **This is the landing page where you can upload your CSV file**
-![Application Screenshot](project/images/landing.png)
+![Application Screenshot](project/images/landing_page.png)
 
 **This is the results page for analysis**
-![Application Screenshot](project/images/r1.png)
+![Application Screenshot](project/images/result1.png)
 
 **You can remove or fill the missing columns. After filling the count will be updated**
-![Application Screenshot](project/images/r2.png)
+![Application Screenshot](project/images/result2.png)
 
 ## Installation
 
