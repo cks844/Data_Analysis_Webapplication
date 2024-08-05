@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+    {% load static %}
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'csv_analysis_app/results.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>RESULTS</h1> 
+        
+        <h2>Data Head</h2> <!--For displaying the head of data-->
+        <div class="table-wrapper">
+            <div class="data-table">{{ head|safe }}</div>
+        </div>
+
+        <h2>Summary Statistics</h2> <!--For displaying the summary of the data-->
+        <div class="table-wrapper">
+            <div class="summary-table">{{ summary|safe }}</div>
+        </div>
+
+        <h2>Missing Values</h2> <!--For displaying the respective columns and total number of missing values in it-->
+        <div class="table-wrapper">
+            <ul class="missing-values">
+                {% for column, count in missing_values.items %}
+                    <li>{{ column }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% if numerical_missing_values %}
+            <form method="post" action="{% url 'remove_missing_values' %}" class="action-form">
+                {% csrf_token %}
+                <button type="submit" class="btnc">Remove Missing Values</button> <!--Button for dropping the rows with null values-->
+            </form>
+            <br>
+            <form method="post" action="{% url 'fill_missing_values' %}" class="action-form">
+                {% csrf_token %}
+                <button type="submit" class="btnc">Fill Missing Values</button> <!--Button for filling the rows with values-->
+            </form>
+        {% endif %}
+
+        {% if new_head %} <!--For displaying the head of data after updation-->
+            <h2>Updated Data Head</h2> 
+            <div class="table-wrapper">
+                <div class="data-table">{{ new_head|safe }}</div>
+            </div>
+        {% endif %}
+        
+        {% if cleaned_summary %} <!--For displaying the summary of data after updation-->
+            <h2>Updated Summary</h2> 
+            <div class="table-wrapper">
+                <div class="summary-table">{{ cleaned_summary|safe }}</div>
+            </div>
+        {% endif %}
+        
+        
+        <h2>Plot</h2> <!--For displaying the plots-->
+        {% if plot_uri %}
+            <img src="data:image/png;base64,{{ plot_uri }}" alt="Plot">
+        {% else %}
+            <p>No numerical columns to plot.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

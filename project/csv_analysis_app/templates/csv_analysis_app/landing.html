@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'csv_analysis_app/landing.css' %}">
+  <title>Data Analysis Application</title>
+  <style>
+    .error-message {
+      color: red;
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="card">
+        <h3><center>Upload Data</center></h3>
+        <div class="drop_box">
+          <p class="file-display"><center>Files Supported: CSV</center></p>
+          <form action="{% url 'upload_file' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="file" accept=".csv" id="fileID" required style="display:none;">
+            <button type="button" class="btnc" onclick="document.getElementById('fileID').click();">Choose File</button>
+            <button class="btnc" type="submit">Submit</button>
+            <div id="error-message" class="error-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('fileID').addEventListener('change', function() {
+        const file = this.files[0];
+        const errorMessage = document.getElementById('error-message');
+        if (file && file.type !== 'text/csv') {
+          errorMessage.textContent = 'Please select a CSV file.';
+        } else {
+          errorMessage.textContent = '';
+        }
+      });
+    </script>
+</body>
+</html>
