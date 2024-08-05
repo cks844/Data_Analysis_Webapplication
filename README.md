@@ -18,9 +18,9 @@ To set up and run the project locally, follow these steps:
 1. **Ensure you have installed Python and VSCode(optional)**:
 2.  **Clone the Repository using the web url**:
    https://github.com/cks844/Data_Analysis_Webapplication.git
-3. **Navigate to the project folder using the below command in terminal**:
+3. **Navigate to the project folder by using the command in terminal**:
    cd project
-4. **Install the required libraries using the below command in terminal**:
+4. **Install the required libraries by using the command in terminal**:
    pip install -r requirements.txt
 5. **For Migration**:
    python manage.py migrate
