@@ -1,6 +1,6 @@
 django
 pandas
-matplotlib.pyplot
+matplotlib
 seaborn
 os
 io
